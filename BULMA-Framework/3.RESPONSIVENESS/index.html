@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script refer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></script> <!--Inside font-awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"> <!--Inside bulma -->
+    <title>Responsiveness</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+                <div class="columns is-desktop">
+<!--Bulma has 4 breakpoints which defines 5 screen sizes: mobile, tablet, desktop, widescreen,fullhd--> 
+                <div class="column has-background-danger is-half ">Primary column</div>
+<!--or is 6, because grid/flexbox is divided in 12 parts or is-one/two/three/four-fifth-->
+                    
+                <div class="column has-background-warning is-4">Secondary column</div>
+                <div class="column has-background-success is-2">Tertiary column</div>
+                <div class="column has-background-info">Quaternary column</div>
+                <!--Colors insert by variables-->
+<!--is-offset-2 or 3, 4... to skip columns among the 12-->
+            </div>
+    </section>
+</body>
+</html>
+<!--ALL CONFIGURATIONS IN DOCUMENTATION IN https://bulma.io/documentation/columns/-->
