@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Flex-basis</title>
+</head>
+<style>
+    .flex-container{
+        max-width: 500px;
+        border: 1px solid black;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .items{
+        background-color: coral;
+        color: white;
+        text-align: center;
+        margin: 5px;
+    }
+    .bauto{
+        /*Tentará ocupar todo o espaço restante, respeitando ao máximo "um padding auto"*/
+        flex-basis: auto;
+    }
+    .bzero{
+    /*Tentará ocupar todo o espaço restante, de margem a margem*/
+        flex-basis: 0;
+    }
+    .fg-1{
+        flex-grow: 1;
+    }
+    .fg-2{
+        flex-grow: 2;
+    }
+    .w100{
+        width: 100px;
+    }
+</style>
+<body>
+    <p>Flex-basis auto</p>
+    <div class="flex-container">
+        <div class="items bauto fg-1">AAAAAA</div>
+        <div class="items bauto fg-1">BBB</div>
+        <div class="items bauto fg-1">C</div>
+        <div class="items bauto fg-2">DEF</div> <!--Espaço 2x maior (padding)-->
+    </div>
+<p>Flex-basis zero</p>
+<!---->
+    <div class="flex-container">
+        <div class="items bzero fg-1">AAAAAA</div>
+        <div class="items bzero fg-1">BBB</div>
+        <div class="items bzero fg-1">C</div>
+        <div class="items bzero fg-2">DEF</div> 
+    </div>
+
+    <p>Flex-basis + width definido</p>
+<!--Ocupa o máximo do width e não mostra o resto, "não responsivo"-->
+    <div class="flex-container">
+        <div class="items w100 fg-2">BBB</div>
+        <div class="items w100 fg-2">C</div>
+        <div class="items w100 fg-2">DEF</div> 
+        <div class="items w100 fg-2">AAAAAAA</div>
+    </div>
+</body>
+</html>

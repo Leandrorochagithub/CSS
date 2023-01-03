@@ -1,0 +1,16 @@
+h1 { font-style: initial; font-size: larger;
+    margin-left: 10%;
+    margin:auto 200px auto;
+    border: 3px solid;
+    padding: 10px;
+    margin: 45px;
+    width: 20%;
+
+    
+
+}
+
+p{ font-style: italic; font-size:medium;
+    text-decoration: underline;
+
+}

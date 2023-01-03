@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Flex-shrink</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+        .item{
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+        .fs-1{
+            /*Tenta comprimir ao máximo elementos dentro do container*/
+            flex-shrink: 1;
+            flex-basis: 100px;
+        }
+        .fs-2{
+            /*Tenta comprimir ao máximo elementos dentro do container em até 2x o tamanho*/
+            flex-shrink: 2;
+        }
+        .fs-3{
+            /*Tenta comprimir ao máximo elementos dentro do container em até 3x o tamanho*/
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+        .fs-0{
+            /*Não tenta comprimir ao máximo elementos dentro do container
+            -Vai respeitar o basis, independente do container
+            */
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+        .s-0{
+            /*Não tenta comprimir ao máximo elementos dentro do container
+            -Vai respeitar o basis, independente do container
+            */
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <p>SHRINK 1 E GROW 1</p>
+    <div class="flex-container">
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">B</div>
+        <div class="item fs-1 fg-1">C</div>
+        <div class="item fs-1 fg-1">D</div>
+        <div class="item fs-1 fg-1">E</div>
+    </div>
+    <p>SHRINK 0 E GROW 1</p>
+    <!--Comprime ao máximo para caber dentro do container-->
+    <div class="flex-container">
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">BBBBBBBBBBBBBBBBBBBBBB</div>
+        <div class="item fs-1 fg-1">C</div>
+        <div class="item fs-1 fg-1">D</div>
+        <div class="item fs-1 fg-1">E</div>
+    </div>
+    <p>SHRINK 0/ BASIS 100</p>
+    <div class="flex-container">
+        <div class="item s-0 fg-1">A</div>
+        <div class="item s-0 fg-1">B</div>
+        <div class="item s-0 fg-1">C</div>
+        <div class="item s-0 fg-1">D</div>
+        <div class="item s-0 fg-1">E</div>
+    </div>
+
+    <p>SHRINK 0/ BASIS 200</p>
+    <div class="flex-container">
+        <div class="item fs-0 fg-1">A</div>
+        <div class="item fs-0 fg-1">B</div>
+        <div class="item fs-0 fg-1">C</div>
+        <div class="item fs-0 fg-1">D</div>
+        <div class="item fs-0 fg-1">E</div>
+    </div>
+    <p>SHRINK VARIADO/ BASIS 100</p>
+    <div class="flex-container">
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-2 fg-1">B</div>
+        <div class="item fs-2 fg-1">C</div>
+        <div class="item fs-3 fg-1">D</div>
+        <div class="item fs-3 fg-1">E</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+h3 { color: #008080;
+font-family: shizuru;
+}
+.post-container{
+    width: 70%;
+    margin: 0px auto 0px auto;
+background-color: #fffafa;
+}
+.post-contant{
+    width: 110%;
+    font-family: Arial, Helvetica, sans-serif;
+}

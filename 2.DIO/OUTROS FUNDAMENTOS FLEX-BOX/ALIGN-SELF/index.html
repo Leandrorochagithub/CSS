@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+        .item{
+            flex: 1; /*item ocupam o tamanho do container proporcionalmente */
+            background-color: brown;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            color: white;
+        }
+        .center{
+            align-self: center;
+        }
+        .start{
+            align-self:flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .baseline{
+            align-self: baseline;
+        }
+        .stretch{
+            /*Ocupa tudo de acordo com o tamanho do elemento interno*/
+            align-self: stretch;
+        }
+        .auto{
+            /*Ocupa tudo*/
+            align-self: auto;
+        }
+        .align-container{
+            align-items: center;
+        }
+        .direction{
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>ROW</h1>
+    <p>MIX</p>
+    <div class="flex-container">
+        <div class="item start">1A</div>
+        <div class="item auto">2B</div>
+        <div class="item auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam!</div>
+        <div class="item end">4D</div>
+        <div class="item center">3CC</div>
+        <div class="item auto">4D</div>
+    </div>
+    <p>MIX</p>
+    <div class="flex-container align-container">
+        <!--Todos os auto ficam no centro-->
+        <div class="item start">1A</div>
+        <div class="item auto">2B</div>
+        <div class="item auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam!</div>
+        <div class="item end">4D</div>
+        <div class="item center">3CC</div>
+        <div class="item auto">4D</div>
+    </div>
+    
+    <h1>COLUMN</h1>
+    <p>MIX</p>
+    <div class="flex-container direction">
+        <div class="item start">1A</div>
+        <div class="item auto">2B</div>
+        <div class="item auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam!</div>
+        <div class="item end">4D</div>
+        <div class="item center">3CC</div>
+        <div class="item auto">4D</div>
+    </div>
+    <p>ORDER mix</p>
+    <div23 class="flex-container direction align-container ">
+        <div class="item start">1A</div>
+        <div class="item auto">2B</div>
+        <div class="item auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam!</div>
+        <div class="item end">4D</div>
+        <div class="item center">3CC</div>
+        <div class="item auto">4D</div>
+    </div>
+</body>
+</html>

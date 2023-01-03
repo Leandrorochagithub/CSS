@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: black;
+    color: chartreuse;
+    min-height: 100vh;
+    gap: 5px;
+
+}
+
+.box {
+    background-color: blue;
+
+}

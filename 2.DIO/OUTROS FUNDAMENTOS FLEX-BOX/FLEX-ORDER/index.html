@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+        .item{
+            flex: 1; /*item ocupam o tamanho do container proporcionalmente */
+            background-color: brown;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            color: white;
+        }
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        .order-4{
+            order: 4;
+        }
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>ROW</h1>
+    <p>ORDER PADRÃO=0</p>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <p>ORDER mix</p>
+    <div class="flex-container">
+        <div class="item order-4">1</div>
+        <div class="item order-3">2</div>
+        <div class="item order-2">3</div>
+        <div class="item order-1">4</div>
+    </div>
+    
+    <h1>COLUMN</h1>
+    <p>ORDER PADRÃO=0</p>
+    <div class="flex-container direction">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <p>ORDER mix</p>
+    <div23 class="flex-container direction ">
+        <div class="item order-4">1</div>
+        <div class="item order-3">2</div>
+        <div class="item order-2">3</div>
+        <div class="item order-1">4</div>
+    </div>
+</body>
+</html>

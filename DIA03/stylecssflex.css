@@ -1,0 +1,8 @@
+.flex-container{
+    display: flex;
+}
+.card{
+    width: 10vw;
+    margin: 5px;
+    padding:5px;
+}
